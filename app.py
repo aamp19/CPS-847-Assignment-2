@@ -1,23 +1,13 @@
-from flask import Flask, render_template
 import unittest
-
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return render_template('index.html')
-
-class TestCode(unittest.TestCase):
-    with open('index.html') as file:
-    contents = file.read()
-    storage = []
-    for i in contents:
-        if i == 'Hello World':
-            storage.append(i)
-            storage = "".join(storage)
-       
+import codecs
+def to_string():
+    f = codecs.open("index.html",'r')
+    storage = f.read()
+    return (storage)
+               
+class TestCode(unittest.TestCase):       
     def test_greeting(self):
-        self.assert_template_used('index.html')
-        self.assert_equal(storage, 'Hello World')
+        self.assertEqual(to_string(), 'hello')
+
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0")
+    unittest.main()
