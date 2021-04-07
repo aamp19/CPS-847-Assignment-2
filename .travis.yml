@@ -10,7 +10,7 @@ install:
 script:
 - docker image build -t kazirys21/dockertest1 .
 - coverage run -m unittest discover
-
+- python app.py
 after_success:
   #log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
