@@ -7,7 +7,7 @@ def to_string():
                
 class TestCode(unittest.TestCase):       
     def test_greeting(self):
-        self.assertEqual(to_string(), 'hello')
+        self.assertEqual(to_string(), 'Hello World!')
 
 if __name__ == '__main__':
     unittest.main()
