@@ -29,7 +29,7 @@ class TestCode(unittest.TestCase):
         self.assertEqual(addition(),2)
     
     def test_subtraction(self):
-        self.assertEqual(subtraction(),0)
+        self.assertEqual(subtraction(),1)
 
 if __name__ == '__main__':
     unittest.main()
