@@ -6,7 +6,6 @@ language: python
 services:
 - docker
 
-
 install:
 - pip install coverage
 
