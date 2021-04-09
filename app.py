@@ -27,10 +27,10 @@ class TestCode(unittest.TestCase):
     def test_greeting(self):
         self.assertEqual(to_string(), True)
 
-    def test_addition(unittest.TestCase):
+    def test_addition(self):
         self.assertEqual(addition(),2)
     
-    def test_subtraction(unittest.TestCase):
+    def test_subtraction(self):
         self.assertEqual(subtraction(),0)
 
 if __name__ == '__main__':
