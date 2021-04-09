@@ -1,8 +1,6 @@
 import unittest
 import codecs
 
-
-
 def to_string():
     f = codecs.open("index.html",'r')
     storage = f.read()
