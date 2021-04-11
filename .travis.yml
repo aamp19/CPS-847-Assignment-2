@@ -14,15 +14,15 @@ install:
 # - pip install -r requirements.txt
 script:
 - python app.py
-- docker image build -t kazirys21/dockertest1 .
+- docker image build -t xscarfacex/cps847a2 .
 # - coverage run -m unittest discover
 - coverage run app.py
 
 after_success:
   #log in to docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+#   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #take built images and push to DOcker hub
-  - docker push kazirys21/dockertest1
+  - docker push xscarfacex/cps847a2
   - bash <(curl -s https://codecov.io/bash)
   - codecov
   #test
