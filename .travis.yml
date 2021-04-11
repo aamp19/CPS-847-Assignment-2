@@ -23,8 +23,8 @@ after_success:
 #   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #take built images and push to DOcker hub
   - docker push xscarfacex/cps847a2
-  - bash <(curl -s https://codecov.io/bash)
-  - codecov
+#   - bash <(curl -s https://codecov.io/bash)
+#   - codecov
 
 deploy:
   provider: elasticbeanstalk
