@@ -32,7 +32,7 @@ deploy:
   region: "us-east-1"
   app: "847_A2"
   env: "847a2-env"
-  bucket_name: "elasticbeanstalk-us-east-1"
+  bucket_name: "elasticbeanstalk-us-east-2-648175851624"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
