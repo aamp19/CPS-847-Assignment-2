@@ -5,7 +5,7 @@ def to_string():
     f = codecs.open("index.html",'r')
     storage = f.read()
     for i in storage.split(" "):
-      if "Hello World" in i:
+      if "Hello" in i:
         return True
   
 
