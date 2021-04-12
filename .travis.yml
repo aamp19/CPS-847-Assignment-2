@@ -1,4 +1,3 @@
-# 8c0d833f-285a-4833-a17f-bd32dc85209a
 env:
   global:
     - CODECOV_TOKEN=58fdd222-b6b1-46e3-9a66-441c6a348e89
@@ -10,21 +9,12 @@ services:
 
 install:
 - pip install coverage
-# - pip install -r requirements.txt
 
 script:
-# - python app.py
 - docker image build -t xscarfacex/cps847a2 .
-# - coverage run -m unittest discover
-#- coverage run app.py
 
 after_success:
-  #log in to docker CLI
-#   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  #take built images and push to DOcker hub
   - docker push xscarfacex/cps847a2
-#   - bash <(curl -s https://codecov.io/bash)
-#   - codecov
 
 
 deploy:
