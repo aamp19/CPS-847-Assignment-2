@@ -26,6 +26,7 @@ after_success:
 #   - bash <(curl -s https://codecov.io/bash)
 #   - codecov
 
+
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
